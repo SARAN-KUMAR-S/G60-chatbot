@@ -13,7 +13,8 @@ with st.sidebar:
 
 
 
-
+#setting logo
+st.logo("Untitled.png",link="https://srng60.rf.gd/")
 
 genai.configure(api_key="AIzaSyADkPW1r_bkHcurSG5fYkC_LOcE2GUasLI")
 
