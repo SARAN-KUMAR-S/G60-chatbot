@@ -1,4 +1,3 @@
-
 import streamlit as st
 from streamlit_option_menu import option_menu
 
@@ -28,11 +27,13 @@ if selected == "Ask me anything":
   inp=st.text_input("Ask Sri",key="inp")
  
 
-
-  bt=st.button("Generate")
-  if bt:
-    response1=get_gemini_response(inp)
-    st.write(response1)
+  try:
+    bt=st.button("Generate")
+    if bt:
+      response1=get_gemini_response(inp)
+      st.write(response1)
+  except:
+    st.write("enter")
 
 #image content with input
 
@@ -62,15 +63,3 @@ if selected == "image description":
       st.image(resized_image)
       response2 = get_image_description_response(user_input,image)
       st.info(response2)
-
-
-          
-
-
-  
-
-
-
-
-
-
