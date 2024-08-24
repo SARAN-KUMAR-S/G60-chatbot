@@ -33,7 +33,7 @@ if selected == "Ask me anything":
       response1=get_gemini_response(inp)
       st.write(response1)
   except:
-    st.write("enter")
+    st.write("Enter prompt")
 
 #image content with input
 
