@@ -73,7 +73,7 @@ def get_invoice(input3,image3):
     model3 = genai.GenerativeModel("gemini-1.5-flash")
     description_response3 = model3.generate_content([input3,image3])
     return description_response3.text
-  except:
+   except:
     return "Try different prompt"
 
 #input="write 3 caption for the image"
