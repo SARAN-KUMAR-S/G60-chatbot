@@ -105,7 +105,7 @@ if selected == "Invoice Extractor":
     else:
       st.warning("Upload Invoice and Ask your Question")
 
-st.sidebar.caption("Developed Saran Kumar")
+st.sidebar.caption("Developed by Saran Kumar")
 
 
 #<button kind="headerNoPadding" data-testid="baseButton-headerNoPadding" class="st-emotion-cache-yfhhig ef3psqc5" fdprocessedid="u4xxa9"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="inherit" class="eyeqlp53 st-emotion-cache-1pbsqtx ex0cdmw0"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></button>
