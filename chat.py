@@ -24,18 +24,23 @@ genai.configure(api_key="AIzaSyCeS5H2EKIESgk_LrDTs5cpmWGifqUkLyE")
 model=genai.GenerativeModel("gemini-pro")
 def get_gemini_response(inp):
   response=model.generate_content(inp)
-  return response.text
+  custom_response = response.text.replace("developed by Google", "developed by G60 SOLUTIONS")
+  custom_response = custom_response.replace("I am Gemini", "I am G60 ")
+  custom_response = custom_response.replace("trained by Google", "developed by G60 SOLUTIONS")
+  custom_response = custom_response.replace("My name is Gemini", "I am G60")
+
+  return custom_response
 
 if selected == "Ask me anything":
   st.title("💬I am here to help you")
-  inp=st.text_input("Ask Srii",key="inp")
+  inp=st.text_input("Ask G60 SRii",key="inp")
  
 
   try:
     bt=st.button("Generate")
     if bt:
-      response1=get_gemini_response(inp)
-      st.write(response1)
+        response1=get_gemini_response(inp)
+        st.write(response1)
   except:
     st.write("Enter prompt")
 
@@ -69,11 +74,11 @@ if selected == "image description":
 
 
 def get_invoice(input3,image3):
-   try:
+  try:
     model3 = genai.GenerativeModel("gemini-1.5-flash")
     description_response3 = model3.generate_content([input3,image3])
     return description_response3.text
-   except:
+  except:
     return "Try different prompt"
 
 #input="write 3 caption for the image"
@@ -99,3 +104,13 @@ if selected == "Invoice Extractor":
       st.info(response2)
     else:
       st.warning("Upload Invoice and Ask your Question")
+
+st.sidebar.caption("Developed Saran Kumar")
+
+
+#<button kind="headerNoPadding" data-testid="baseButton-headerNoPadding" class="st-emotion-cache-yfhhig ef3psqc5" fdprocessedid="u4xxa9"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="inherit" class="eyeqlp53 st-emotion-cache-1pbsqtx ex0cdmw0"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></button>
+
+
+
+
+
